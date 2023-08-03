@@ -28,7 +28,41 @@ function ExperienceCard (props) {
 };
 
 function ProjectCard (props) {
+    const {title, skills, description, projectLink, imageLink} = props;
+    const skillsList = skills.map((skill) => <SkillTag value={skill}/>);
+
+    const openInNewTab = () => {
+        window.open( projectLink, "_blank");
+    }
+
+    const [hoveredOver, setHoveredOver] = useState(false);
+    const handleMouseEnter = () => {
+        setHoveredOver(true);
+    }
+
+    const handleMouseLeave = () => {
+        setHoveredOver(false);
+    }
     
+    return(
+        <div className=" hover:cursor-pointer p-3 hover:bg-slate-800 hover:bg-opacity-40
+         hover:rounded-md text-gray-300 flex flex-col gap-4 md:flex-row" 
+         onClick={openInNewTab}  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div className=" w-2/3 md:w-1/3 rounded-md border-teal-800">
+                <img src={imageLink} className="object-cover w-full rounded-md"/>
+            </div>
+            <div className=" md:w-1/2 flex justify-start flex-col">
+                <div className={ hoveredOver ? "flex flex-row" : "flex flex-row"}>
+                    <h3 className={ hoveredOver ? " text-green-400 font-medium text-xl pb-2" : "text-gray-200 font-medium text-xl pb-2"}>{title}</h3>
+                    <BsArrowUpRight className={hoveredOver ? " text-green-400 animate-bounce mt-2 ml-1 text-3xl font-bold" : " mt-2 ml-1 text-md"} />
+                </div>
+                <p className="text-md">{description}</p>
+                <div className=" mt-2 flex gap-2 flex-wrap justify-start">
+                    {skillsList}                
+                </div>
+            </div>
+        </div>
+    )
 };
 
 export {ExperienceCard, ProjectCard};
