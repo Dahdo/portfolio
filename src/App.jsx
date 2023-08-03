@@ -1,5 +1,5 @@
 import {AiFillTwitterCircle, AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
-import { ExperienceCard, ProjectCard } from './components';
+import { ExperienceCard, ProjectCard, ResumePreview } from './components';
 import {experience1, project1}from './constants';
 
 function App() {
@@ -31,7 +31,13 @@ function App() {
           <ExperienceCard {...experience1} />
           <ExperienceCard {...experience1} />
         </div>
+        <div className=" mb-28 mt-5">
+          <ResumePreview />
+        </div>
         <div className="flex flex-col gap-10 mt-20">
+          <ProjectCard {...project1} />
+          <ProjectCard {...project1} />
+          <ProjectCard {...project1} />
           <ProjectCard {...project1} />
         </div>
       </section>
