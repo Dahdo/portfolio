@@ -12,7 +12,7 @@ function SkillTag(props) {
 
 function ExperienceCard (props) {
     const {from, to, title, company, skills, description} = props;
-    const skillsList = skills.map((skill) => <SkillTag value={skill}/>);
+    const skillsList = skills.map((skill, index) => <SkillTag key={index} value={skill}/>);
     
     return(
         <div className=" p-3 hover:bg-slate-800 hover:cursor-default hover:bg-opacity-40 hover:rounded-md text-gray-300 flex flex-col gap-4 md:flex-row">
@@ -30,7 +30,7 @@ function ExperienceCard (props) {
 
 function ProjectCard (props) {
     const {title, skills, description, projectLink, imageLink} = props;
-    const skillsList = skills.map((skill) => <SkillTag value={skill}/>);
+    const skillsList = skills.map((skill, index) => <SkillTag key={index} value={skill}/>);
 
     const openInNewTab = () => {
         window.open( projectLink, "_blank");
