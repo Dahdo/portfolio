@@ -1,5 +1,5 @@
 import {AiFillTwitterCircle, AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
-import { ExperienceCard, ProjectCard, ResumePreview } from './minor_components';
+import { ExperienceCard, ProjectCard, ResumePreview, MobileSectionTitle} from './minor_components';
 import * as All from './constants';
 
 function Intro() {
@@ -11,6 +11,18 @@ function Intro() {
     </div>
   )
 };
+
+function Navbar() {
+  return (
+    <nav>
+      <ul className="mt-20 space-y-5">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+      </ul>
+    </nav>
+  );
+}
 
 function Social() {
   return (
@@ -24,32 +36,41 @@ function Social() {
 
 function About() {
   return (
-    <div>
-      <p>{All.ABOUT}</p>
-    </div>
+    <>
+      <MobileSectionTitle value="About"/>
+      <div>
+        <p>{All.ABOUT}</p>
+      </div>
+    </>
   );
 };
 
 function Experience() {
   return (
-    <div className="flex flex-col gap-10">
-              <ExperienceCard {...All.EXPERIENCE_1} />
-              <ExperienceCard {...All.EXPERIENCE_1} />
-              <ExperienceCard {...All.EXPERIENCE_1} />
-              <ResumePreview />
-    </div>
+    <>
+      <MobileSectionTitle value="Experience"/>
+      <div className="flex flex-col gap-10">
+                <ExperienceCard {...All.EXPERIENCE_1} />
+                <ExperienceCard {...All.EXPERIENCE_1} />
+                <ExperienceCard {...All.EXPERIENCE_1} />
+                <ResumePreview />
+      </div>
+    </>
   )
 };
 
 function Projects() {
   return(
-    <div className="flex flex-col gap-10">
-      <ProjectCard {...All.PROJECT_1} />
-      <ProjectCard {...All.PROJECT_1} />
-      <ProjectCard {...All.PROJECT_1} />
-      <ProjectCard {...All.PROJECT_1} />
-  </div>
+    <>
+      <MobileSectionTitle value="Projects"/>
+      <div className="flex flex-col gap-10">
+        <ProjectCard {...All.PROJECT_1} />
+        <ProjectCard {...All.PROJECT_1} />
+        <ProjectCard {...All.PROJECT_1} />
+        <ProjectCard {...All.PROJECT_1} />
+      </div>
+    </>
   );
 }
 
-export {Intro, Social, About, Experience, Projects};
+export {Intro, Navbar, Social, About, Experience, Projects};
