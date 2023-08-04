@@ -15,10 +15,10 @@ function Intro() {
 function Navbar() {
   return (
     <nav>
-      <ul className="mt-20 space-y-5">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#experience">EXPERIENCE</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
+      <ul className=" mt-20 space-y-5 w-fit">
+        <li className=" hover:ml-2"><a className="hover:text-white" href="#about">ABOUT</a></li>
+        <li className=" hover:ml-2"><a className="hover:text-white" href="#about">EXPERIENCE</a></li>
+        <li className=" hover:ml-2"><a className="hover:text-white" href="#about">PROJECTS</a></li>
       </ul>
     </nav>
   );
@@ -26,10 +26,10 @@ function Navbar() {
 
 function Social() {
   return (
-    <div className=" flex justify-start gap-5 text-3xl text-gray-300">
-          <AiFillGithub/>
-          <AiFillLinkedin/>
-          <AiFillTwitterCircle/>
+    <div className="flex justify-start gap-5 text-3xl text-gray-300">
+      <div className="hover:text-white"><AiFillGithub/></div>
+      <div className="hover:text-white"><AiFillLinkedin/></div>
+      <div className="hover:text-white"><AiFillTwitterCircle/></div>
     </div>
   )
 }

@@ -94,7 +94,7 @@ function ResumePreview() {
 
 function MobileSectionTitle(props) {
     return (
-        <div className=" bg-slate-800 mb-2">
+        <div className=" md:hidden bg-slate-800 mb-2">
             <h2 className=" tracking-widest text-center uppercase font-bold italic">{props.value}</h2>
         </div>
     )
