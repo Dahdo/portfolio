@@ -2,6 +2,7 @@ import React from 'react';
 import {BsArrowUpRight} from 'react-icons/bs';
 import { BsArrowRight } from 'react-icons/bs';
 import { useState } from 'react';
+import { LINK_LINKEDIN } from './constants';
 
 function SkillTag(props) {
     return (
@@ -19,7 +20,7 @@ function ExperienceCard (props) {
             <p className=" md:w-1/3 whitespace-nowrap font-light text-neutral-400 uppercase">{from} <span className="text-xl">&minus;</span> {to}</p>
             <div className=" md:w-2/3 flex justify-start flex-col">
                 <h3 className="text-gray-200 font-medium text-xl pb-2">{title} <span className="font-medium">•</span> <span className=" text-neutral-400 italic">{company}</span></h3>
-                <p className="text-md">{description}</p>
+                <p>{description}</p>
                 <div className=" mt-2 flex gap-2 flex-wrap justify-start">
                     {skillsList}                
                 </div>
@@ -57,7 +58,7 @@ function ProjectCard (props) {
                     <h3 className={ hoveredOver ? " text-green-400 font-medium text-xl pb-2" : "text-gray-200 font-medium text-xl pb-2"}>{title}</h3>
                     <BsArrowUpRight className={hoveredOver ? " text-green-400  mb-2 ml-3 text-md font-bold" : " mt-2 ml-1 text-md"} />
                 </div>
-                <p className="text-md">{description}</p>
+                <p>{description}</p>
                 <div className=" mt-2 flex gap-2 flex-wrap justify-start">
                     {skillsList}                
                 </div>
@@ -69,7 +70,7 @@ function ProjectCard (props) {
 function ResumePreview() {
 
     const openInNewTab = () => {
-        window.open( "resume.pdf", "_blank");
+        window.open( LINK_LINKEDIN, "_blank");
     }
 
     const [hoveredOver, setHoveredOver] = useState(false);
@@ -82,7 +83,7 @@ function ResumePreview() {
     }
 
     return (
-        <div className="flex flex-row p-5" onClick={openInNewTab}
+        <div className=" cursor-pointer w-fit flex flex-row p-5" onClick={openInNewTab}
         onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <p className={ hoveredOver ? "text-xl font-bold border-b border-green-500" :
             "text-xl font-bold"}>View Full Résumé</p>
@@ -98,6 +99,6 @@ function MobileSectionTitle(props) {
             <h2 className=" tracking-widest text-center uppercase font-bold italic">{props.value}</h2>
         </div>
     )
-}
+};
 
 export {ExperienceCard, ProjectCard, ResumePreview, MobileSectionTitle};
