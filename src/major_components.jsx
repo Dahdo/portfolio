@@ -27,9 +27,9 @@ function Navbar() {
 function Social() {
   return (
     <div className="flex justify-start gap-5 text-3xl text-gray-300">
-      <div className="hover:text-white"><AiFillGithub/></div>
-      <div className="hover:text-white"><AiFillLinkedin/></div>
-      <div className="hover:text-white"><AiFillTwitterCircle/></div>
+      <div className="hover:text-white"><a href={All.LINK_GITHUB} target="_blank"><AiFillGithub/></a></div>
+      <div className="hover:text-white"><a href={All.LINK_LINKEDIN} target="_blank"><AiFillLinkedin/></a></div>
+      <div className="hover:text-white"><a href={All.LINK_X} target="_blank"><AiFillTwitterCircle/></a></div>
     </div>
   )
 }
@@ -50,10 +50,8 @@ function Experience() {
     <>
       <MobileSectionTitle value="Experience"/>
       <div className="flex flex-col gap-10">
-                <ExperienceCard {...All.EXPERIENCE_1} />
-                <ExperienceCard {...All.EXPERIENCE_1} />
-                <ExperienceCard {...All.EXPERIENCE_1} />
-                <ResumePreview />
+        {All.EXPERIENCE.map((exp) => <ExperienceCard {...exp} /> )}
+        <ResumePreview />
       </div>
     </>
   )
@@ -64,10 +62,7 @@ function Projects() {
     <>
       <MobileSectionTitle value="Projects"/>
       <div className="flex flex-col gap-10">
-        <ProjectCard {...All.PROJECT_1} />
-        <ProjectCard {...All.PROJECT_1} />
-        <ProjectCard {...All.PROJECT_1} />
-        <ProjectCard {...All.PROJECT_1} />
+        {All.PROJECTS.map((proj) => <ProjectCard {...proj} /> )}
       </div>
     </>
   );
