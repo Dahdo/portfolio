@@ -17,8 +17,8 @@ function Navbar() {
     <nav>
       <ul className=" mt-20 space-y-5 w-fit">
         <li className=" hover:ml-2"><a className="hover:text-white" href="#about">ABOUT</a></li>
-        <li className=" hover:ml-2"><a className="hover:text-white" href="#about">EXPERIENCE</a></li>
-        <li className=" hover:ml-2"><a className="hover:text-white" href="#about">PROJECTS</a></li>
+        <li className=" hover:ml-2"><a className="hover:text-white" href="#experience">EXPERIENCE</a></li>
+        <li className=" hover:ml-2"><a className="hover:text-white" href="#projects">PROJECTS</a></li>
       </ul>
     </nav>
   );
