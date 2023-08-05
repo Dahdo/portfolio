@@ -22,7 +22,7 @@ function ExperienceCard (props) {
             </div>
             <div className=" md:w-2/3 flex justify-start flex-col">
                 <h3 className="text-gray-200 font-medium text-xl pb-2">{title} <span className="font-medium">•</span> <span className=" text-neutral-400 italic">{company}</span></h3>
-                <p>{description}</p>
+                <p className="text-gray-400">{description}</p>
                 <div className=" mt-2 flex gap-2 flex-wrap justify-start">
                     {skillsList}                
                 </div>
@@ -55,12 +55,12 @@ function ProjectCard (props) {
             <div className=" w-2/3 md:w-1/3 rounded-md border-teal-800">
                 <img src={imageLink} className="object-cover w-full rounded-md"/>
             </div>
-            <div className=" md:w-1/2 flex justify-start flex-col">
+            <div className=" md:w-2/3 flex justify-start flex-col">
                 <div className={ hoveredOver ? "flex flex-row" : "flex flex-row"}>
                     <h3 className={ hoveredOver ? " text-green-400 font-medium text-xl pb-2" : "text-gray-200 font-medium text-xl pb-2"}>{title}</h3>
                     <BsArrowUpRight className={hoveredOver ? " text-green-400  mb-2 ml-3 text-md font-bold" : " mt-2 ml-1 text-md"} />
                 </div>
-                <p>{description}</p>
+                <p className="text-gray-400">{description}</p>
                 <div className=" mt-2 flex gap-2 flex-wrap justify-start">
                     {skillsList}                
                 </div>

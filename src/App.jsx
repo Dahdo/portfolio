@@ -2,7 +2,7 @@ import {Intro, Navbar, Social, About, Experience, Projects} from './major_compon
 
 function App() {
   return (
-    <main className=" bg-slate-900 flex min-h-screen flex-col gap-10 md:flex-row font-light text-gray-300 px-2 md:pr-5 md:pl-10 m-0">
+    <main className=" bg-slate-900 flex min-h-screen flex-col gap-10 md:flex-row text-gray-400 px-8 md:px-10 m-0">
       <section className=" basis-1/2 py-10 md:py-20 md:fixed md:w-5/12">
         <Intro/>
         <div className=" hidden md:block"><Navbar/></div>

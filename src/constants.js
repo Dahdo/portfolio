@@ -12,7 +12,7 @@ export const LINK_X = "https://twitter.com/ndashimye_";
 //experience
 export const EXPERIENCE = [
   {
-    from: "Jul, 2023",
+    from: "Jul 2023",
     to: "Present",
     title: "Azure SQL Support Engineer",
     company: "Microsoft",
@@ -21,8 +21,8 @@ export const EXPERIENCE = [
   },
 
   {
-    from: "Sep, 2022",
-    to: "Mar, 2023",
+    from: "Sep 2022",
+    to: "Mar 2023",
     title: "IT Assistant",
     company: "Kyndryl",
     skills: ["Linux", "Azure", "Networking"],
@@ -50,7 +50,7 @@ export const PROJECTS = [
 
   {
      title: "Pong Game (Windows API)",
-     imageLink: "pong.png",
+     imageLink: "pong.gif",
      skills: ["C++", "C", "WinAPI"],
      projectLink: "https://github.com/Dahdo/Pong-WinAPI",
      description: "Developed as part of a university project, the Pong game showcases my skills in utilizing the Windows API along with C and C++. This classic game implementation demonstrates graphics programming and game development skills, using low-level programming languages and system libraries."
