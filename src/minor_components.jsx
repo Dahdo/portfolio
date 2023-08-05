@@ -17,7 +17,9 @@ function ExperienceCard (props) {
     
     return(
         <div className=" px-2 py-3 hover:bg-slate-800 hover:cursor-default hover:bg-opacity-40 hover:rounded-md text-gray-300 flex flex-col gap-4 md:flex-row">
-            <p className=" md:w-1/3 whitespace-nowrap font-light text-neutral-400 uppercase">{from} <span className="text-xl">&minus;</span> {to}</p>
+            <div>
+                <p className=" md:w-fit text-sm whitespace-nowrap font-light text-neutral-400 uppercase">{from} <span className="text-xl">&minus;</span> {to}</p>
+            </div>
             <div className=" md:w-2/3 flex justify-start flex-col">
                 <h3 className="text-gray-200 font-medium text-xl pb-2">{title} <span className="font-medium">•</span> <span className=" text-neutral-400 italic">{company}</span></h3>
                 <p>{description}</p>
@@ -70,7 +72,7 @@ function ProjectCard (props) {
 function ResumePreview() {
 
     const openInNewTab = () => {
-        window.open( LINK_LINKEDIN, "_blank");
+        window.open("resume.pdf");
     }
 
     const [hoveredOver, setHoveredOver] = useState(false);
