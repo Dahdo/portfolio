@@ -72,7 +72,7 @@ function ProjectCard (props) {
 function ResumePreview() {
 
     const openInNewTab = () => {
-        window.open("resume.pdf");
+        window.open( LINK_LINKEDIN, "_blank");
     }
 
     const [hoveredOver, setHoveredOver] = useState(false);
