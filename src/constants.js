@@ -50,7 +50,7 @@ export const PROJECTS = [
 
   {
      title: "Pong Game (Windows API)",
-     imageLink: "sampleimg.jpg",
+     imageLink: "pong.png",
      skills: ["C++", "C", "WinAPI"],
      projectLink: "https://github.com/Dahdo/Pong-WinAPI",
      description: "Developed as part of a university project, the Pong game showcases my skills in utilizing the Windows API along with C and C++. This classic game implementation demonstrates graphics programming and game development skills, using low-level programming languages and system libraries."
